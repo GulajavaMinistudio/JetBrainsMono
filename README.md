@@ -13,18 +13,29 @@ The most recent version of JetBrains Mono ships with your JetBrains IDE starting
 Select JetBrains Mono in the IDE settings: go to `Preferences/Settings` → `Editor` → `Font`, and then select JetBrains Mono from the Font dropdown.
 
 ### Another IDE or an older version of a JetBrains IDE
-
-1. [Download font](https://github.com/JetBrains/JetBrainsMono/releases/download/v1.0.3/JetBrainsMono-1.0.3.zip). 
+#### Through brew (MacOS only)
+1. Tap the font cask to make the Jetbrains Mono font available :
+    ```console
+    brew tap homebrew/cask-fonts
+    ```
+2. Install it using the `font-jetbrains-mono` cask:
+   ```console
+   brew cask install font-jetbrains-mono
+   ```
+#### Or manually
+1. [Download font](https://github.com/JetBrains/JetBrainsMono/releases/latest). 
 2. Unzip the archive and install the font:
    - Mac. Select all font files in the folder and double-click them. Click the *"Install Font"* button.
    - Windows. Select all font files in the folder, right-click any of them, then pick *"Install"* from the menu.
    - Ubuntu. Open a terminal with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and run the following:
    
-      ```
+      ```bash
       cd <name_of_our_archive.zip>
       unzip "\*.zip" -d ${HOME}/.fonts
       sudo fc-cache -f -v
       ```
+
+#### Picking the font for your IDE
 3. Restart your IDE.
 4. Go to `Preferences/Settings` → `Editor` → `Font`, and pick JetBrains Mono from the Font dropdown.
 
@@ -41,7 +52,7 @@ Visual Studio Code allows you to also edit the underlying settings.json config f
 
 Then paste the following lines and save the file.
 
-```
+```json
 "editor.fontFamily": "JetBrains Mono",
 "editor.fontLigatures": true,
 ```
@@ -52,7 +63,7 @@ In the terminal:
 2. Scroll down to "Custom CSS (Inline Text)".
 3. Copy & paste the following:
 
-```
+```css
 @font-face{
     font-family: 'JetBrains Mono';
     src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/eot/JetBrainsMono-Regular.eot') format('embedded-opentype'),
