@@ -1,5 +1,6 @@
-.idea
+.idea/workspace.xml
 JetBrainsMono.iml
 out
 lib
 source/JetBrainsMono.backup
+env
